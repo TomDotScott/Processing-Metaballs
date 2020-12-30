@@ -1,4 +1,4 @@
-int blobAmount = 15;
+int blobAmount = 10;
 Blob[] blobs = new Blob[blobAmount];
 
 
@@ -29,10 +29,10 @@ void draw(){
       for(int i = 0; i < blobAmount; i++){
         float d = dist(x, y, blobs[i].m_position.x, blobs[i].m_position.y);
         
-        sum += (100 * blobs[i].m_radius / d);
+        sum += (150 * blobs[i].m_radius / d);
       }
-      
-      pixels[index] = color(0, 255, 255);
+
+      pixels[index] = color(sum, 255, 255);
     }
   }
   updatePixels();  
